@@ -93,6 +93,13 @@
 			<artifactId>kumo-tokenizers</artifactId>
 			<version>1.17</version>
 		</dependency>
+		
+		<!-- disruptor的Jar包 -->
+		<dependency>
+		    <groupId>com.lmax</groupId>
+		    <artifactId>disruptor</artifactId>
+		    <version>3.4.2</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>third-jar-project-learn</finalName>
