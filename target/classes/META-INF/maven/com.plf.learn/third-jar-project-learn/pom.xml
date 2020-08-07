@@ -116,6 +116,8 @@
 			<version>29.0-jre</version>
 		</dependency>
 
+
+		<!-- 分词 -->
 		<dependency>
 			<groupId>org.ansj</groupId>
 			<artifactId>ansj_seg</artifactId>
@@ -133,6 +135,32 @@
 			<artifactId>jcseg-analyzer</artifactId>
 			<version>2.6.2</version>
 		</dependency>
+
+		<!-- 生成数据库文档 -->
+		<dependency>
+			<groupId>cn.smallbun.screw</groupId>
+			<artifactId>screw-core</artifactId>
+			<version>1.0.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+			<version>3.4.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.20</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.30</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>third-jar-project-learn</finalName>
