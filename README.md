@@ -1,1 +1,15 @@
-# third-jar-project-learn
+### Java第三方工具
+- 解析Bson(主要是MongoDB的存储格式)
+- Disruptor入门
+- Elastic Job入门
+- Grok入门(主要是解析日志)
+- Guava入门
+- Kafka Lower
+- Pdf入门
+- 转换拼音
+- 生成数据库文档
+- Java分词
+- 操作时间工具
+- UUID
+- 读取Word文档
+- 生成词云
