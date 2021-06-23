@@ -1,6 +1,5 @@
 package com.plf.learn.kafka.lower;
 
-
 import kafka.api.FetchRequest;
 import kafka.api.FetchRequestBuilder;
 import kafka.cluster.Broker;
