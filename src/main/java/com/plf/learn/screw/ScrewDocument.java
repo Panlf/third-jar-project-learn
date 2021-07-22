@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 import javax.sql.DataSource;
 
-import org.junit.Test;
-
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
@@ -15,6 +13,7 @@ import cn.smallbun.screw.core.engine.EngineFileType;
 import cn.smallbun.screw.core.engine.EngineTemplateType;
 import cn.smallbun.screw.core.execute.DocumentationExecute;
 import cn.smallbun.screw.core.process.ProcessConfig;
+import org.junit.jupiter.api.Test;
 
 public class ScrewDocument {
 	/**

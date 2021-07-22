@@ -2,9 +2,8 @@ package com.plf.learn.uuid;
 
 import java.util.UUID;
 
-import org.junit.Test;
-
 import com.fasterxml.uuid.Generators;
+import org.junit.jupiter.api.Test;
 
 /**
  * Java 工具类获取UUID

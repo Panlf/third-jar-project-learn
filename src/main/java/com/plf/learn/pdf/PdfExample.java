@@ -2,8 +2,6 @@ package com.plf.learn.pdf;
 
 import java.io.IOException;
 
-import org.junit.Test;
-
 import com.itextpdf.io.font.FontConstants;
 import com.itextpdf.kernel.font.PdfFont;
 import com.itextpdf.kernel.font.PdfFontFactory;
@@ -13,6 +11,7 @@ import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.List;
 import com.itextpdf.layout.element.ListItem;
 import com.itextpdf.layout.element.Paragraph;
+import org.junit.jupiter.api.Test;
 
 /**
  * itext的使用

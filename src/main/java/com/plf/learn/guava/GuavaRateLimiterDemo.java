@@ -27,14 +27,10 @@ public class GuavaRateLimiterDemo {
 		for (int i = 0; i < 100; i++) {
 			rateLimitPool.execute(()->{
                 rateLimiter.acquire();
-                try {
-                    log.info(Thread.currentThread().getName()+" take a token");
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+				log.info(Thread.currentThread().getName()+" take a token");
             });
 		}
+		rateLimitPool.shutdown();
 	}
 	
 	public static void main(String[] args) {

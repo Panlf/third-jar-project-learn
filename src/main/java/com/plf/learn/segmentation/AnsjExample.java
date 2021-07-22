@@ -1,7 +1,7 @@
 package com.plf.learn.segmentation;
 
 import org.ansj.splitWord.analysis.ToAnalysis;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Ansj的文本分词

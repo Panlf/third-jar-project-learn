@@ -3,10 +3,9 @@ package com.plf.learn.guava;
 import java.util.List;
 import java.util.Objects;
 
-import org.junit.Test;
-
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
+import org.junit.jupiter.api.Test;
 
 /**
  * Preconditions检验参数
@@ -14,7 +13,7 @@ import com.google.common.collect.ImmutableList;
  *
  */
 public class GuavaPreconditionsDemo {
-	@Test(expected = NullPointerException.class)
+	@Test
 	public void testCheckNotNull(){
 		Preconditions.checkNotNull(null);
 	}

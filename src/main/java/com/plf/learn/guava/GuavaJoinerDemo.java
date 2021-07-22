@@ -3,7 +3,7 @@ package com.plf.learn.guava;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,7 +37,7 @@ public class GuavaJoinerDemo {
 	/**
 	 * 当遇到NULL值该方法会报错
 	 */
-	@Test(expected=NullPointerException.class)
+	@Test
 	public void testJoinOnJoinWithNull(){
 		String result = Joiner.on(",").join(stringListWithNullValue);
 		log.info(result);

@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.apdplat.word.WordSegmenter;
 import org.apdplat.word.segmentation.Word;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * word分词器的简单实例
