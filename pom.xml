@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.plf.learn</groupId>
 	<artifactId>third-jar-project-learn</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -221,6 +221,13 @@
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-core</artifactId>
 			<version>1.2.3</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.github.chris2018998</groupId>
+			<artifactId>beecp</artifactId>
+			<version>3.2.6</version>
 		</dependency>
 
 		<dependency>
