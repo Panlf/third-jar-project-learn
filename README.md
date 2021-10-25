@@ -1,13 +1,17 @@
 ### Java第三方工具
 - 解析Bson(主要是MongoDB的存储格式)
+- Apache Calcite(SQL语句解析)
 - Disruptor入门
 - Elastic Job入门
 - Grok入门(主要是解析日志)
 - Guava入门
+- 测试批量插入的效率
 - Kafka Lower
+- okhttp
+- Orika(类转换)
 - Pdf入门
 - 转换拼音
-- 生成数据库文档
+- screw(生成数据库文档)
 - Java分词
 - 操作时间工具
 - UUID
