@@ -13,14 +13,14 @@ import java.io.IOException;
 import java.net.URLEncoder;
 import java.security.SecureRandom;
 import java.security.cert.X509Certificate;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
 public class OkHttpUtils {
 	private static volatile OkHttpClient okHttpClient = null;
 	private static volatile Semaphore semaphore = null;
+	private final HashMap<String, List<Cookie>> cookieStore = new HashMap<>();
 	private Map<String, String> headerMap;
 	private Map<String, String> paramMap;
 	private String url;
@@ -38,7 +38,20 @@ public class OkHttpUtils {
 							.writeTimeout(20, TimeUnit.SECONDS).readTimeout(20, TimeUnit.SECONDS)
 							.sslSocketFactory(createSSLSocketFactory(trustManagers),
 									(X509TrustManager) trustManagers[0])
-							.hostnameVerifier((hostName, session) -> true).retryOnConnectionFailure(true).build();
+							.hostnameVerifier((hostName, session) -> true)
+							.retryOnConnectionFailure(true)
+							.cookieJar(new CookieJar() {
+								@Override
+								public void saveFromResponse(HttpUrl httpUrl, List<Cookie> list) {
+									cookieStore.put(httpUrl.host(), list);
+								}
+								@Override
+								public List<Cookie> loadForRequest(HttpUrl httpUrl) {
+									List<Cookie> cookies = cookieStore.get(httpUrl.host());
+									return cookies != null ? cookies : new ArrayList<Cookie>();
+								}
+							})
+							.build();
 					addHeader("User-Agent",
 							"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36");
 				}
@@ -148,7 +161,7 @@ public class OkHttpUtils {
 			if (paramMap != null) {
 				json = JSON.toJSONString(paramMap);
 			}
-			requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), json);
+			requestBody = RequestBody.create(json.getBytes(),MediaType.parse("application/json; charset=utf-8"));
 		} else {
 			FormBody.Builder formBody = new FormBody.Builder();
 			if (paramMap != null) {
