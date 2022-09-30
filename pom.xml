@@ -255,6 +255,24 @@
 			<artifactId>minio</artifactId>
 			<version>8.3.3</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.13</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore</artifactId>
+			<version>4.4.13</version>
+		</dependency>
+
+		<dependency>
+		 <groupId>org.eclipse.birt.runtime.3_7_1</groupId>
+		 <artifactId>com.lowagie.text</artifactId>
+		 <version>2.1.7</version>
+		 </dependency>
 	</dependencies>
 	<build>
 		<finalName>third-jar-project-learn</finalName>
