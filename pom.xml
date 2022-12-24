@@ -48,7 +48,7 @@
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-scratchpad</artifactId>
-			<version>4.1.1</version>
+			<version>5.2.1</version>
 		</dependency>
 
 		<dependency>
@@ -162,7 +162,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.20</version>
+			<version>8.0.28</version>
 		</dependency>
 
 		<dependency>
@@ -201,7 +201,7 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
-			<version>1.2.60</version>
+			<version>1.2.83</version>
 		</dependency>
 
 		<!-- logback -->
@@ -220,9 +220,8 @@
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-core</artifactId>
-			<version>1.2.3</version>
+			<version>1.2.9</version>
 		</dependency>
-
 
 		<dependency>
 			<groupId>com.github.chris2018998</groupId>
@@ -246,9 +245,8 @@
 		<dependency>
 			<groupId>org.apache.calcite</groupId>
 			<artifactId>calcite-core</artifactId>
-			<version>1.27.0</version>
+			<version>1.32.0</version>
 		</dependency>
-
 
 		<dependency>
 			<groupId>io.minio</groupId>
@@ -260,6 +258,18 @@
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
 			<version>5.7.14</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.13</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore</artifactId>
+			<version>4.4.13</version>
 		</dependency>
 	</dependencies>
 	<build>
