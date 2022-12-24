@@ -255,6 +255,12 @@
 			<artifactId>minio</artifactId>
 			<version>8.3.3</version>
 		</dependency>
+
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>5.7.14</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>third-jar-project-learn</finalName>

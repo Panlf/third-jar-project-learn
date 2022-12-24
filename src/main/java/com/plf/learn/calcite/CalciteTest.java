@@ -1,5 +1,6 @@
 package com.plf.learn.calcite;
 
+import com.alibaba.fastjson.JSON;
 import org.apache.calcite.config.Lex;
 import org.apache.calcite.sql.SqlNode;
 import org.apache.calcite.sql.SqlSelect;
@@ -22,11 +23,11 @@ import org.apache.calcite.sql.parser.SqlParser;
 public class CalciteTest {
     public static void main(String[] args) {
         SqlParser.Config config = SqlParser.config().withLex(Lex.MYSQL);
-        SqlParser sqlParser = SqlParser.create("select id,name from test",config);
+        SqlParser sqlParser = SqlParser.create("select t.id,t.name,c.desc from test t left join test_copy c on c.tid=t.id",config);
         try {
             SqlNode sqlNode = sqlParser.parseQuery();
             SqlSelect sqlSelect = (SqlSelect) sqlNode;
-            System.out.println(sqlSelect.getFrom()+"--"+sqlSelect.getSelectList().getList());
+            System.out.println(sqlSelect);
         } catch (SqlParseException e) {
             e.printStackTrace();
         }
