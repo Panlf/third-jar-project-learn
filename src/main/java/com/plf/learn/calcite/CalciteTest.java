@@ -31,6 +31,5 @@ public class CalciteTest {
         } catch (SqlParseException e) {
             e.printStackTrace();
         }
-
     }
 }

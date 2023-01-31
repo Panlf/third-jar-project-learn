@@ -12,15 +12,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import de.undercouch.bson4jackson.BsonFactory;
 
 public class ReadBSON {
-	public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
-		InputStream is = new  FileInputStream("src/main/resources/person.bson");
-        try {
+	public static void main(String[] args) throws
+            IOException {
+        try (InputStream is = new FileInputStream("src/main/resources/person.bson")) {
             ObjectMapper mapper = new ObjectMapper(new BsonFactory());
-           
+
             Map<?, ?> result = mapper.readValue(is, Map.class);
             System.out.println(result);
-        } finally {
-            is.close();
         }
 	}
 }
